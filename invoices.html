@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>NexaPay — Invoices</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <div class="app">
+            <!-- SIDEBAR -->
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-logo">
+                    <div class="logo-mark">N</div>
+                    <span>NexaPay</span>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <div class="nav-section">
+                        <div class="nav-label">Workspace</div>
+
+                        <a href="index.html" class="nav-item">
+                            <span class="nav-icon">⌂</span>
+                            <span>Overview</span>
+                        </a>
+
+                        <a href="transactions.html" class="nav-item">
+                            <span class="nav-icon">↔</span>
+                            <span>Transactions</span>
+                        </a>
+
+                        <a href="customers.html" class="nav-item">
+                            <span class="nav-icon">◉</span>
+                            <span>Customers</span>
+                        </a>
+
+                        <a href="payment-links.html" class="nav-item">
+                            <span class="nav-icon">⌁</span>
+                            <span>Payment Links</span>
+                        </a>
+
+                        <a href="invoices.html" class="nav-item active">
+                            <span class="nav-icon">▤</span>
+                            <span>Invoices</span>
+                        </a>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="nav-label">Finance</div>
+
+                        <a href="#" class="nav-item">
+                            <span class="nav-icon">€</span>
+                            <span>Balance</span>
+                        </a>
+
+                        <a href="#" class="nav-item">
+                            <span class="nav-icon">↑</span>
+                            <span>Payouts</span>
+                        </a>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="nav-label">Manage</div>
+
+                        <a href="settings.html" class="nav-item">
+                            <span class="nav-icon">⚙</span>
+                            <span>Settings</span>
+                        </a>
+
+                        <a href="#" class="nav-item">
+                            <span class="nav-icon">?</span>
+                            <span>Help center</span>
+                        </a>
+                    </div>
+                </nav>
+
+                <div class="sidebar-bottom">
+                    <div class="workspace-user">
+                        <div class="user-avatar">G</div>
+
+                        <div class="user-info">
+                            <strong>Gabhy</strong>
+                            <span>Ga.B Agency</span>
+                        </div>
+
+                        <span class="user-more">•••</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- MAIN -->
+            <main class="main">
+                <!-- TOPBAR -->
+                <header class="topbar">
+                    <div class="topbar-left">
+                        <button class="mobile-menu" id="menuToggle">☰</button>
+
+                        <div class="breadcrumb">
+                            <span>Workspace</span>
+                            <span>/</span>
+                            <strong>Invoices</strong>
+                        </div>
+                    </div>
+
+                    <div class="topbar-actions">
+                        <button
+                            class="icon-button"
+                            id="themeToggle"
+                            title="Changer le thème"
+                        >
+                            ◐
+                        </button>
+
+                        <button class="icon-button" title="Notifications">
+                            ♢
+                        </button>
+
+                        <div class="topbar-avatar">G</div>
+                    </div>
+                </header>
+
+                <!-- CONTENT -->
+                <section class="content">
+                    <!-- HEADER -->
+                    <div class="page-header">
+                        <div>
+                            <div class="page-eyebrow">Billing</div>
+
+                            <h1>Invoices</h1>
+
+                            <p>
+                                Create, track and manage invoices sent to your
+                                customers.
+                            </p>
+                        </div>
+
+                        <div class="page-header-actions">
+                            <button
+                                class="secondary-button"
+                                id="exportInvoices"
+                            >
+                                Export
+                            </button>
+
+                            <button class="primary-button" id="createInvoice">
+                                + Create invoice
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- SUMMARY -->
+                    <div class="transaction-summary-grid">
+                        <div class="mini-stat-card">
+                            <span class="mini-stat-label">Total invoices</span>
+                            <strong id="totalInvoices">0</strong>
+                            <small>All generated invoices</small>
+                        </div>
+
+                        <div class="mini-stat-card">
+                            <span class="mini-stat-label">Paid</span>
+                            <strong id="paidInvoices">0</strong>
+                            <small>Successfully collected</small>
+                        </div>
+
+                        <div class="mini-stat-card">
+                            <span class="mini-stat-label">Outstanding</span>
+                            <strong id="outstandingInvoices">€0.00</strong>
+                            <small>Pending collection</small>
+                        </div>
+
+                        <div class="mini-stat-card">
+                            <span class="mini-stat-label">Overdue</span>
+                            <strong id="overdueInvoices">0</strong>
+                            <small>Require attention</small>
+                        </div>
+                    </div>
+
+                    <!-- TABLE CARD -->
+                    <div class="table-card">
+                        <!-- TOOLBAR -->
+                        <div class="table-toolbar">
+                            <div class="search-box">
+                                <span class="search-icon">⌕</span>
+
+                                <input
+                                    type="search"
+                                    id="invoiceSearch"
+                                    placeholder="Search invoices, customers..."
+                                    autocomplete="off"
+                                />
+                            </div>
+
+                            <div class="filter-group">
+                                <select id="statusFilter" class="filter-select">
+                                    <option value="all">All statuses</option>
+                                    <option value="paid">Paid</option>
+                                    <option value="pending">Pending</option>
+                                    <option value="overdue">Overdue</option>
+                                    <option value="draft">Draft</option>
+                                </select>
+
+                                <select id="sortFilter" class="filter-select">
+                                    <option value="recent">Most recent</option>
+                                    <option value="oldest">Oldest</option>
+                                    <option value="amount-high">
+                                        Amount: high to low
+                                    </option>
+                                    <option value="amount-low">
+                                        Amount: low to high
+                                    </option>
+                                    <option value="customer">
+                                        Customer A–Z
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- TABLE -->
+                        <div class="table-wrapper">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Invoice</th>
+                                        <th>Customer</th>
+                                        <th>Amount</th>
+                                        <th>Issue date</th>
+                                        <th>Due date</th>
+                                        <th>Status</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="invoicesTableBody">
+                                    <!-- Generated by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- PAGINATION -->
+                        <div class="pagination" id="invoicePagination">
+                            <!-- Generated by JS -->
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- INVOICE MODAL -->
+        <div class="modal-overlay" id="invoiceModal">
+            <div class="transaction-modal-panel">
+                <div class="modal-header">
+                    <div>
+                        <span class="page-eyebrow">Invoice</span>
+                        <h2 id="modalInvoiceId">INV-2026-0001</h2>
+                    </div>
+
+                    <button class="modal-close" id="closeInvoiceModal">
+                        ×
+                    </button>
+                </div>
+
+                <div class="modal-content">
+                    <div class="invoice-modal-status" id="modalInvoiceStatus">
+                        Paid
+                    </div>
+
+                    <div class="invoice-total-box">
+                        <span>Total</span>
+
+                        <strong id="modalInvoiceAmount"> €0.00 </strong>
+                    </div>
+
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <span>Customer</span>
+                            <strong id="modalInvoiceCustomer">—</strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Description</span>
+                            <strong id="modalInvoiceDescription">—</strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Issue date</span>
+                            <strong id="modalInvoiceIssueDate">—</strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Due date</span>
+                            <strong id="modalInvoiceDueDate">—</strong>
+                        </div>
+                    </div>
+
+                    <div class="invoice-actions">
+                        <button class="secondary-button" id="downloadInvoice">
+                            Download PDF
+                        </button>
+
+                        <button class="primary-button" id="sendInvoice">
+                            Send invoice
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCRIPT -->
+        <script src="js/data.js"></script>
+        <script src="js/script.js"></script>
+
+        <script>
+            "use strict";
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const invoices = window.NexaPayData?.invoices || [];
+
+                const tableBody = document.getElementById("invoicesTableBody");
+                const pagination = document.getElementById("invoicePagination");
+
+                const searchInput = document.getElementById("invoiceSearch");
+                const statusFilter = document.getElementById("statusFilter");
+                const sortFilter = document.getElementById("sortFilter");
+
+                const modal = document.getElementById("invoiceModal");
+                const closeModal = document.getElementById("closeInvoiceModal");
+
+                const createButton = document.getElementById("createInvoice");
+                const exportButton = document.getElementById("exportInvoices");
+
+                let currentPage = 1;
+                const perPage = 15;
+
+                let filteredInvoices = [...invoices];
+
+                /* -----------------------------
+       HELPERS
+    ----------------------------- */
+
+                function escapeHTML(value) {
+                    return String(value ?? "")
+                        .replace(/&/g, "&amp;")
+                        .replace(/</g, "&lt;")
+                        .replace(/>/g, "&gt;")
+                        .replace(/"/g, "&quot;")
+                        .replace(/'/g, "&#039;");
+                }
+
+                function formatMoney(amount, currency = "EUR") {
+                    return new Intl.NumberFormat("en-US", {
+                        style: "currency",
+                        currency
+                    }).format(amount);
+                }
+
+                function formatDate(date) {
+                    return new Intl.DateTimeFormat("en-GB", {
+                        day: "2-digit",
+                        month: "short",
+                        year: "numeric"
+                    }).format(new Date(date));
+                }
+
+                function statusLabel(status) {
+                    const labels = {
+                        paid: "Paid",
+                        pending: "Pending",
+                        overdue: "Overdue",
+                        draft: "Draft"
+                    };
+
+                    return labels[status] || status;
+                }
+
+                function statusClass(status) {
+                    return `status-${status}`;
+                }
+
+                /* -----------------------------
+       SUMMARY
+    ----------------------------- */
+
+                function updateSummary() {
+                    const total = invoices.length;
+
+                    const paid = invoices.filter(
+                        invoice => invoice.status === "paid"
+                    ).length;
+
+                    const outstanding = invoices
+                        .filter(
+                            invoice =>
+                                invoice.status === "pending" ||
+                                invoice.status === "overdue"
+                        )
+                        .reduce(
+                            (sum, invoice) => sum + Number(invoice.amount || 0),
+                            0
+                        );
+
+                    const overdue = invoices.filter(
+                        invoice => invoice.status === "overdue"
+                    ).length;
+
+                    document.getElementById("totalInvoices").textContent =
+                        total.toLocaleString();
+
+                    document.getElementById("paidInvoices").textContent =
+                        paid.toLocaleString();
+
+                    document.getElementById("outstandingInvoices").textContent =
+                        formatMoney(outstanding);
+
+                    document.getElementById("overdueInvoices").textContent =
+                        overdue.toLocaleString();
+                }
+
+                /* -----------------------------
+       FILTER + SORT
+    ----------------------------- */
+
+                function applyFilters() {
+                    const search = searchInput.value.trim().toLowerCase();
+
+                    const status = statusFilter.value;
+                    const sort = sortFilter.value;
+
+                    filteredInvoices = invoices.filter(invoice => {
+                        const matchesSearch =
+                            !search ||
+                            invoice.id.toLowerCase().includes(search) ||
+                            invoice.customer.toLowerCase().includes(search) ||
+                            invoice.description.toLowerCase().includes(search);
+
+                        const matchesStatus =
+                            status === "all" || invoice.status === status;
+
+                        return matchesSearch && matchesStatus;
+                    });
+
+                    filteredInvoices.sort((a, b) => {
+                        switch (sort) {
+                            case "oldest":
+                                return (
+                                    new Date(a.issueDate) -
+                                    new Date(b.issueDate)
+                                );
+
+                            case "amount-high":
+                                return b.amount - a.amount;
+
+                            case "amount-low":
+                                return a.amount - b.amount;
+
+                            case "customer":
+                                return a.customer.localeCompare(b.customer);
+
+                            case "recent":
+                            default:
+                                return (
+                                    new Date(b.issueDate) -
+                                    new Date(a.issueDate)
+                                );
+                        }
+                    });
+
+                    currentPage = 1;
+
+                    renderTable();
+                }
+
+                /* -----------------------------
+       TABLE
+    ----------------------------- */
+
+                function renderTable() {
+                    const start = (currentPage - 1) * perPage;
+
+                    const end = start + perPage;
+
+                    const pageInvoices = filteredInvoices.slice(start, end);
+
+                    if (!pageInvoices.length) {
+                        tableBody.innerHTML = `
+                <tr>
+                    <td colspan="7" class="empty-state">
+                        No invoices found.
+                    </td>
+                </tr>
+            `;
+
+                        pagination.innerHTML = "";
+
+                        return;
+                    }
+
+                    tableBody.innerHTML = pageInvoices
+                        .map(invoice => {
+                            return `
+                <tr class="clickable-row"
+                    data-id="${escapeHTML(invoice.id)}">
+
+                    <td>
+                        <div class="transaction-id">
+                            <strong>
+                                ${escapeHTML(invoice.id)}
+                            </strong>
+
+                            <span>
+                                ${escapeHTML(invoice.description)}
+                            </span>
+                        </div>
+                    </td>
+
+
+                    <td>
+                        <div class="customer-cell">
+
+                            <div class="customer-avatar">
+                                ${escapeHTML(
+                                    invoice.customer.charAt(0).toUpperCase()
+                                )}
+                            </div>
+
+                            <div>
+                                <strong>
+                                    ${escapeHTML(invoice.customer)}
+                                </strong>
+                            </div>
+
+                        </div>
+                    </td>
+
+
+                    <td>
+                        <strong>
+                            ${formatMoney(
+                                invoice.amount,
+                                invoice.currency || "EUR"
+                            )}
+                        </strong>
+                    </td>
+
+
+                    <td>
+                        ${formatDate(invoice.issueDate)}
+                    </td>
+
+
+                    <td>
+                        ${formatDate(invoice.dueDate)}
+                    </td>
+
+
+                    <td>
+                        <span class="status ${statusClass(invoice.status)}">
+                            <span class="status-dot"></span>
+                            ${statusLabel(invoice.status)}
+                        </span>
+                    </td>
+
+
+                    <td>
+                        <button
+                            class="row-action invoice-view-button"
+                            data-id="${escapeHTML(invoice.id)}"
+                            title="View invoice"
+                        >
+                            →
+                        </button>
+                    </td>
+
+                </tr>
+            `;
+                        })
+                        .join("");
+
+                    renderPagination();
+                }
+
+                /* -----------------------------
+       PAGINATION
+    ----------------------------- */
+
+                function renderPagination() {
+                    const totalPages = Math.ceil(
+                        filteredInvoices.length / perPage
+                    );
+
+                    if (totalPages <= 1) {
+                        pagination.innerHTML = "";
+
+                        return;
+                    }
+
+                    let html = `
+
+            <button
+                class="pagination-button"
+                data-page="${currentPage - 1}"
+                ${currentPage === 1 ? "disabled" : ""}
+            >
+                ←
+            </button>
+
+        `;
+
+                    for (let page = 1; page <= totalPages; page++) {
+                        if (
+                            page === 1 ||
+                            page === totalPages ||
+                            Math.abs(page - currentPage) <= 1
+                        ) {
+                            html += `
+                    <button
+                        class="pagination-button ${
+                            page === currentPage ? "active" : ""
+                        }"
+                        data-page="${page}"
+                    >
+                        ${page}
+                    </button>
+                `;
+                        } else if (
+                            page === currentPage - 2 ||
+                            page === currentPage + 2
+                        ) {
+                            html += `<span class="pagination-dots">...</span>`;
+                        }
+                    }
+
+                    html += `
+
+            <button
+                class="pagination-button"
+                data-page="${currentPage + 1}"
+                ${currentPage === totalPages ? "disabled" : ""}
+            >
+                →
+            </button>
+
+        `;
+
+                    pagination.innerHTML = html;
+                }
+
+                /* -----------------------------
+       MODAL
+    ----------------------------- */
+
+                function openInvoice(invoiceId) {
+                    const invoice = invoices.find(
+                        item => item.id === invoiceId
+                    );
+
+                    if (!invoice) return;
+
+                    document.getElementById("modalInvoiceId").textContent =
+                        invoice.id;
+
+                    document.getElementById("modalInvoiceStatus").textContent =
+                        statusLabel(invoice.status);
+
+                    document.getElementById("modalInvoiceStatus").className =
+                        `invoice-modal-status ${statusClass(invoice.status)}`;
+
+                    document.getElementById("modalInvoiceAmount").textContent =
+                        formatMoney(invoice.amount, invoice.currency || "EUR");
+
+                    document.getElementById(
+                        "modalInvoiceCustomer"
+                    ).textContent = invoice.customer;
+
+                    document.getElementById(
+                        "modalInvoiceDescription"
+                    ).textContent = invoice.description;
+
+                    document.getElementById(
+                        "modalInvoiceIssueDate"
+                    ).textContent = formatDate(invoice.issueDate);
+
+                    document.getElementById("modalInvoiceDueDate").textContent =
+                        formatDate(invoice.dueDate);
+
+                    modal.classList.add("open");
+                }
+
+                function closeInvoiceModal() {
+                    modal.classList.remove("open");
+                }
+
+                /* -----------------------------
+       EVENTS
+    ----------------------------- */
+
+                searchInput.addEventListener("input", applyFilters);
+
+                statusFilter.addEventListener("change", applyFilters);
+
+                sortFilter.addEventListener("change", applyFilters);
+
+                tableBody.addEventListener("click", event => {
+                    const row = event.target.closest("[data-id]");
+
+                    if (!row) return;
+
+                    openInvoice(row.dataset.id);
+                });
+
+                pagination.addEventListener("click", event => {
+                    const button = event.target.closest("[data-page]");
+
+                    if (!button || button.disabled) return;
+
+                    const page = Number(button.dataset.page);
+
+                    if (page < 1) return;
+
+                    const totalPages = Math.ceil(
+                        filteredInvoices.length / perPage
+                    );
+
+                    if (page > totalPages) return;
+
+                    currentPage = page;
+
+                    renderTable();
+                });
+
+                closeModal.addEventListener("click", closeInvoiceModal);
+
+                modal.addEventListener("click", event => {
+                    if (event.target === modal) {
+                        closeInvoiceModal();
+                    }
+                });
+
+                document.addEventListener("keydown", event => {
+                    if (event.key === "Escape") {
+                        closeInvoiceModal();
+                    }
+                });
+
+                createButton.addEventListener("click", () => {
+                    alert("Invoice creation flow — bientôt disponible.");
+                });
+
+                document
+                    .getElementById("sendInvoice")
+                    .addEventListener("click", () => {
+                        alert("Invoice sent successfully.");
+                    });
+
+                document
+                    .getElementById("downloadInvoice")
+                    .addEventListener("click", () => {
+                        alert("PDF generation — bientôt disponible.");
+                    });
+
+                /* -----------------------------
+       CSV EXPORT
+    ----------------------------- */
+
+                exportButton.addEventListener("click", () => {
+                    const headers = [
+                        "Invoice ID",
+                        "Customer",
+                        "Description",
+                        "Amount",
+                        "Currency",
+                        "Status",
+                        "Issue Date",
+                        "Due Date"
+                    ];
+
+                    const rows = invoices.map(invoice => [
+                        invoice.id,
+                        invoice.customer,
+                        invoice.description,
+                        invoice.amount,
+                        invoice.currency || "EUR",
+                        invoice.status,
+                        invoice.issueDate,
+                        invoice.dueDate
+                    ]);
+
+                    const csv = [headers, ...rows]
+                        .map(row =>
+                            row
+                                .map(
+                                    value =>
+                                        `"${String(value ?? "").replace(
+                                            /"/g,
+                                            '""'
+                                        )}"`
+                                )
+                                .join(",")
+                        )
+                        .join("\n");
+
+                    const blob = new Blob([csv], {
+                        type: "text/csv;charset=utf-8;"
+                    });
+
+                    const url = URL.createObjectURL(blob);
+
+                    const link = document.createElement("a");
+
+                    link.href = url;
+
+                    link.download = "nexapay-invoices.csv";
+
+                    document.body.appendChild(link);
+
+                    link.click();
+
+                    link.remove();
+
+                    URL.revokeObjectURL(url);
+                });
+
+                /* -----------------------------
+       INITIALIZE
+    ----------------------------- */
+
+                updateSummary();
+                applyFilters();
+            });
+        </script>
+    </body>
+</html>

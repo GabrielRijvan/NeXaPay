@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>NexaPay — Overview</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <div class="app">
+            <!-- SIDEBAR -->
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-top">
+                    <a href="index.html" class="brand">
+                        <div class="brand-logo">N</div>
+                        <span>NexaPay</span>
+                    </a>
+
+                    <nav class="navigation">
+                        <div class="nav-section">
+                            <span class="nav-label">Workspace</span>
+
+                            <a href="index.html" class="nav-link active">
+                                <span class="nav-icon">⌂</span>
+                                <span>Overview</span>
+                            </a>
+
+                            <a href="transactions.html" class="nav-link">
+                                <span class="nav-icon">↔</span>
+                                <span>Transactions</span>
+                            </a>
+
+                            <a href="customers.html" class="nav-link">
+                                <span class="nav-icon">♙</span>
+                                <span>Customers</span>
+                            </a>
+
+                            <a href="payment-links.html" class="nav-link">
+                                <span class="nav-icon">↗</span>
+                                <span>Payment Links</span>
+                            </a>
+
+                            <a href="invoices.html" class="nav-link">
+                                <span class="nav-icon">▤</span>
+                                <span>Invoices</span>
+                            </a>
+                        </div>
+
+                        <div class="nav-section">
+                            <span class="nav-label">Finance</span>
+
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon">◉</span>
+                                <span>Balance</span>
+                            </a>
+
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon">⇄</span>
+                                <span>Payouts</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="sidebar-bottom">
+                    <a href="settings.html" class="nav-link">
+                        <span class="nav-icon">⚙</span>
+                        <span>Settings</span>
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon">?</span>
+                        <span>Help center</span>
+                    </a>
+
+                    <div class="user-profile">
+                        <div class="avatar">GB</div>
+
+                        <div class="user-info">
+                            <strong>Gabhy</strong>
+                            <span>Ga.B Agency</span>
+                        </div>
+
+                        <button class="user-more">•••</button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- MAIN -->
+            <main class="main">
+                <!-- TOPBAR -->
+                <header class="topbar">
+                    <button class="mobile-menu" id="mobileMenu">☰</button>
+
+                    <div class="breadcrumb">
+                        <span>Workspace</span>
+                        <span>/</span>
+                        <strong>Overview</strong>
+                    </div>
+
+                    <div class="topbar-actions">
+                        <button
+                            class="icon-button"
+                            id="themeToggle"
+                            aria-label="Changer le thème"
+                        >
+                            ☾
+                        </button>
+
+                        <button class="icon-button notification-button">
+                            ♢
+                            <span class="notification-dot"></span>
+                        </button>
+
+                        <button class="topbar-avatar">GB</button>
+                    </div>
+                </header>
+
+                <!-- CONTENT -->
+                <div class="content">
+                    <div class="page-header">
+                        <div>
+                            <span class="eyebrow">Overview</span>
+                            <h1>Good morning, Gabhy.</h1>
+                            <p>Here's what's happening with your payments.</p>
+                        </div>
+
+                        <div class="page-actions">
+                            <button class="secondary-button">↓ Export</button>
+
+                            <button class="primary-button">
+                                + Create payment
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- KPI CARDS -->
+                    <section class="stats-grid">
+                        <article class="stat-card">
+                            <div class="stat-top">
+                                <span class="stat-title"
+                                    >Available balance</span
+                                >
+                                <span class="stat-icon">€</span>
+                            </div>
+
+                            <div class="stat-value">€48,250.00</div>
+
+                            <div class="stat-footer">
+                                <span class="positive">+8.42%</span>
+                                <span>vs last month</span>
+                            </div>
+                        </article>
+
+                        <article class="stat-card">
+                            <div class="stat-top">
+                                <span class="stat-title">Total volume</span>
+                                <span class="stat-icon">↗</span>
+                            </div>
+
+                            <div class="stat-value">€684,920.00</div>
+
+                            <div class="stat-footer">
+                                <span class="positive">+12.8%</span>
+                                <span>vs last month</span>
+                            </div>
+                        </article>
+
+                        <article class="stat-card">
+                            <div class="stat-top">
+                                <span class="stat-title"
+                                    >Successful payments</span
+                                >
+                                <span class="stat-icon">✓</span>
+                            </div>
+
+                            <div class="stat-value">1,284</div>
+
+                            <div class="stat-footer">
+                                <span class="positive">+6.4%</span>
+                                <span>vs last month</span>
+                            </div>
+                        </article>
+
+                        <article class="stat-card">
+                            <div class="stat-top">
+                                <span class="stat-title">Pending</span>
+                                <span class="stat-icon warning">!</span>
+                            </div>
+
+                            <div class="stat-value">€3,840.00</div>
+
+                            <div class="stat-footer">
+                                <span class="warning-text">17 payments</span>
+                                <span>need attention</span>
+                            </div>
+                        </article>
+                    </section>
+
+                    <!-- MAIN ANALYTICS -->
+                    <section class="analytics-grid">
+                        <article class="card revenue-card">
+                            <div class="card-header">
+                                <div>
+                                    <h2>Revenue</h2>
+                                    <p>Payment volume over the last 30 days</p>
+                                </div>
+
+                                <select class="period-select">
+                                    <option>Last 30 days</option>
+                                    <option>Last 7 days</option>
+                                    <option>Last 90 days</option>
+                                </select>
+                            </div>
+
+                            <div class="revenue-summary">
+                                <strong>€84,920</strong>
+                                <span class="positive">+12.8%</span>
+                            </div>
+
+                            <div class="chart-placeholder">
+                                <div class="chart-y-axis">
+                                    <span>€10k</span>
+                                    <span>€7.5k</span>
+                                    <span>€5k</span>
+                                    <span>€2.5k</span>
+                                    <span>€0</span>
+                                </div>
+
+                                <div class="chart-area">
+                                    <div class="chart-grid-line line-1"></div>
+                                    <div class="chart-grid-line line-2"></div>
+                                    <div class="chart-grid-line line-3"></div>
+                                    <div class="chart-grid-line line-4"></div>
+                                    <div class="chart-grid-line line-5"></div>
+
+                                    <svg
+                                        class="revenue-line"
+                                        viewBox="0 0 800 250"
+                                        preserveAspectRatio="none"
+                                    >
+                                        <defs>
+                                            <linearGradient
+                                                id="chartGradient"
+                                                x1="0"
+                                                y1="0"
+                                                x2="0"
+                                                y2="1"
+                                            >
+                                                <stop
+                                                    offset="0%"
+                                                    stop-opacity=".18"
+                                                />
+
+                                                <stop
+                                                    offset="100%"
+                                                    stop-opacity="0"
+                                                />
+                                            </linearGradient>
+                                        </defs>
+
+                                        <path
+                                            class="chart-fill"
+                                            d="M0 190
+                                       C40 180 60 165 90 175
+                                       S140 145 175 160
+                                       S220 125 255 140
+                                       S300 100 335 120
+                                       S380 95 420 110
+                                       S470 65 510 90
+                                       S560 75 600 85
+                                       S650 45 690 65
+                                       S750 30 800 45
+                                       L800 250
+                                       L0 250 Z"
+                                        />
+
+                                        <path
+                                            class="chart-path"
+                                            d="M0 190
+                                       C40 180 60 165 90 175
+                                       S140 145 175 160
+                                       S220 125 255 140
+                                       S300 100 335 120
+                                       S380 95 420 110
+                                       S470 65 510 90
+                                       S560 75 600 85
+                                       S650 45 690 65
+                                       S750 30 800 45"
+                                        />
+                                    </svg>
+
+                                    <div class="chart-tooltip">
+                                        <span>Sep 24</span>
+                                        <strong>€8,420</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chart-labels">
+                                <span>Sep 1</span>
+                                <span>Sep 8</span>
+                                <span>Sep 15</span>
+                                <span>Sep 22</span>
+                                <span>Sep 30</span>
+                            </div>
+                        </article>
+
+                        <!-- PAYMENT METHODS -->
+                        <article class="card payment-methods-card">
+                            <div class="card-header">
+                                <div>
+                                    <h2>Payment methods</h2>
+                                    <p>Distribution this month</p>
+                                </div>
+
+                                <button class="more-button">•••</button>
+                            </div>
+
+                            <div class="donut-wrapper">
+                                <div class="donut-chart">
+                                    <div class="donut-center">
+                                        <strong>€84.9K</strong>
+                                        <span>Total</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="payment-legend">
+                                <div class="legend-item">
+                                    <span class="legend-color purple"></span>
+                                    <span>Visa</span>
+                                    <strong>46%</strong>
+                                </div>
+
+                                <div class="legend-item">
+                                    <span class="legend-color blue"></span>
+                                    <span>Mastercard</span>
+                                    <strong>31%</strong>
+                                </div>
+
+                                <div class="legend-item">
+                                    <span class="legend-color green"></span>
+                                    <span>Bank transfer</span>
+                                    <strong>14%</strong>
+                                </div>
+
+                                <div class="legend-item">
+                                    <span class="legend-color gray"></span>
+                                    <span>Other</span>
+                                    <strong>9%</strong>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <!-- TRANSACTIONS -->
+                    <section class="card transactions-card">
+                        <div class="card-header">
+                            <div>
+                                <h2>Recent transactions</h2>
+                                <p>Your latest payment activity</p>
+                            </div>
+
+                            <a href="transactions.html" class="view-all">
+                                View all →
+                            </a>
+                        </div>
+
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Transaction</th>
+                                        <th>Customer</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="transaction-id">
+                                                <span class="transaction-icon"
+                                                    >↗</span
+                                                >
+                                                <div>
+                                                    <strong>TX-84921</strong>
+                                                    <small
+                                                        >Branding project</small
+                                                    >
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="customer-cell">
+                                                <div class="mini-avatar">
+                                                    AS
+                                                </div>
+                                                <span>Acme Studio</span>
+                                            </div>
+                                        </td>
+
+                                        <td>Sep 28, 2026</td>
+
+                                        <td>
+                                            <span class="status success">
+                                                <i></i> Succeeded
+                                            </span>
+                                        </td>
+
+                                        <td class="amount">+€850.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="transaction-id">
+                                                <span class="transaction-icon"
+                                                    >↗</span
+                                                >
+                                                <div>
+                                                    <strong>TX-84920</strong>
+                                                    <small>Landing page</small>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="customer-cell">
+                                                <div class="mini-avatar">
+                                                    NA
+                                                </div>
+                                                <span>Nova Agency</span>
+                                            </div>
+                                        </td>
+
+                                        <td>Sep 28, 2026</td>
+
+                                        <td>
+                                            <span class="status success">
+                                                <i></i> Succeeded
+                                            </span>
+                                        </td>
+
+                                        <td class="amount">+€1,420.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="transaction-id">
+                                                <span class="transaction-icon"
+                                                    >↗</span
+                                                >
+                                                <div>
+                                                    <strong>TX-84919</strong>
+                                                    <small>Consulting</small>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="customer-cell">
+                                                <div class="mini-avatar">
+                                                    JM
+                                                </div>
+                                                <span>John Martin</span>
+                                            </div>
+                                        </td>
+
+                                        <td>Sep 27, 2026</td>
+
+                                        <td>
+                                            <span class="status pending">
+                                                <i></i> Pending
+                                            </span>
+                                        </td>
+
+                                        <td class="amount">+€240.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="transaction-id">
+                                                <span class="transaction-icon"
+                                                    >↗</span
+                                                >
+                                                <div>
+                                                    <strong>TX-84918</strong>
+                                                    <small
+                                                        >Design services</small
+                                                    >
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="customer-cell">
+                                                <div class="mini-avatar">
+                                                    BD
+                                                </div>
+                                                <span>Blue Digital</span>
+                                            </div>
+                                        </td>
+
+                                        <td>Sep 27, 2026</td>
+
+                                        <td>
+                                            <span class="status refunded">
+                                                <i></i> Refunded
+                                            </span>
+                                        </td>
+
+                                        <td class="amount negative">
+                                            -€520.00
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+        <script src="js/data.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

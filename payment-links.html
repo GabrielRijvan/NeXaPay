@@ -1,0 +1,1271 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>NexaPay — Payment Links</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand">
+                    <span class="brand-mark">N</span>
+
+                    <span>NexaPay</span>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <span class="nav-section-title"> Workspace </span>
+
+                    <a href="index.html" class="nav-link">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                            </svg>
+                        </span>
+
+                        Overview
+                    </a>
+
+                    <a href="transactions.html" class="nav-link">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M3 6h18"></path>
+                                <path d="M3 12h18"></path>
+                                <path d="M3 18h18"></path>
+                            </svg>
+                        </span>
+
+                        Transactions
+                    </a>
+
+                    <a href="customers.html" class="nav-link">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M3 21v-2a6 6 0 0 1 12 0v2"></path>
+                                <path d="M16 3.5a4 4 0 0 1 0 7"></path>
+                                <path d="M21 21v-2a6 6 0 0 0-4-5.65"></path>
+                            </svg>
+                        </span>
+
+                        Customers
+                    </a>
+
+                    <a href="payment-links.html" class="nav-link active">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                                ></path>
+                                <path
+                                    d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                                ></path>
+                            </svg>
+                        </span>
+
+                        Payment Links
+                    </a>
+
+                    <a href="invoices.html" class="nav-link">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M6 2h12v20l-3-2-3 2-3-2-3 2z"></path>
+                                <path d="M9 7h6"></path>
+                                <path d="M9 11h6"></path>
+                                <path d="M9 15h4"></path>
+                            </svg>
+                        </span>
+
+                        Invoices
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-section-title"> Finance </span>
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24">
+                                <rect
+                                    x="3"
+                                    y="5"
+                                    width="18"
+                                    height="14"
+                                    rx="2"
+                                ></rect>
+                                <path d="M3 10h18"></path>
+                                <path d="M7 15h3"></path>
+                            </svg>
+                        </span>
+
+                        Balance
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 3v18"></path>
+                                <path
+                                    d="M17 7H9.5a3.5 3.5 0 0 0 0 7H15a3.5 3.5 0 0 1 0 7H7"
+                                ></path>
+                            </svg>
+                        </span>
+
+                        Payouts
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-section-title"> Manage </span>
+
+                    <a href="settings.html" class="nav-link">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06-1.4 1.4-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21h-2v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06-1.4-1.4.06.06A1.65 1.65 0 0 0 9.6 15a1.65 1.65 0 0 0-1.51-1H8v-2h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06 1.4-1.4.06.06a1.65 1.65 0 0 0 1.82.33A1.65 1.65 0 0 0 15 6.09V6h2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06 1.4 1.4-.06.06a1.65 1.65 0 0 0-.33 1.82 1.65 1.65 0 0 0 1.51 1H22v2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                                ></path>
+                            </svg>
+                        </span>
+
+                        Settings
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <path
+                                    d="M9.5 9a2.5 2.5 0 1 1 4.4 1.6c-.9 1-1.9 1.3-1.9 2.9"
+                                ></path>
+                                <path d="M12 17h.01"></path>
+                            </svg>
+                        </span>
+
+                        Help center
+                    </a>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">G</div>
+
+                    <div class="user-info">
+                        <strong> Gabhy </strong>
+
+                        <span> Ga.B Agency </span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+        <main class="main">
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button
+                        class="mobile-menu"
+                        type="button"
+                        aria-label="Open menu"
+                    >
+                        ☰
+                    </button>
+
+                    <div class="breadcrumb">
+                        <span> Workspace </span>
+
+                        <span class="breadcrumb-separator"> / </span>
+
+                        <strong> Payment Links </strong>
+                    </div>
+                </div>
+
+                <div class="topbar-actions">
+                    <button
+                        id="themeToggle"
+                        class="icon-button"
+                        type="button"
+                        aria-label="Change theme"
+                    >
+                        <svg viewBox="0 0 24 24" width="18" height="18"></svg>
+                    </button>
+
+                    <button
+                        class="icon-button notification-button"
+                        type="button"
+                        aria-label="Notifications"
+                    >
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"
+                            ></path>
+                            <path d="M10 21h4"></path>
+                        </svg>
+
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <div class="topbar-avatar">G</div>
+                </div>
+            </header>
+
+            <!-- PAGE -->
+
+            <section class="page-content">
+                <!-- HEADER -->
+
+                <div class="page-header">
+                    <div>
+                        <span class="page-eyebrow"> Checkout </span>
+
+                        <h1>Payment Links</h1>
+
+                        <p>
+                            Create and manage links that let customers pay
+                            online.
+                        </p>
+                    </div>
+
+                    <div class="page-header-actions">
+                        <button
+                            class="secondary-button"
+                            id="exportPaymentLinks"
+                            type="button"
+                        >
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 3v12"></path>
+                                <path d="m7 10 5 5 5-5"></path>
+                                <path d="M5 21h14"></path>
+                            </svg>
+
+                            Export
+                        </button>
+
+                        <button
+                            class="primary-button"
+                            id="createPaymentLink"
+                            type="button"
+                        >
+                            + Create payment link
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SUMMARY -->
+
+                <div class="transaction-summary-grid">
+                    <div class="mini-stat-card">
+                        <span> Total links </span>
+
+                        <strong id="totalLinks"> — </strong>
+                    </div>
+
+                    <div class="mini-stat-card">
+                        <span> Active links </span>
+
+                        <strong id="activeLinks"> — </strong>
+                    </div>
+
+                    <div class="mini-stat-card">
+                        <span> Total payments </span>
+
+                        <strong id="totalLinkPayments"> — </strong>
+                    </div>
+
+                    <div class="mini-stat-card">
+                        <span> Revenue generated </span>
+
+                        <strong id="linkRevenue"> — </strong>
+                    </div>
+                </div>
+
+                <!-- TABLE -->
+
+                <div class="table-card">
+                    <div class="table-toolbar">
+                        <div class="search-box">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="11" cy="11" r="7"></circle>
+                                <path d="m20 20-4-4"></path>
+                            </svg>
+
+                            <input
+                                type="search"
+                                id="linkSearch"
+                                placeholder="Search payment links..."
+                                autocomplete="off"
+                            />
+                        </div>
+
+                        <div class="filter-group">
+                            <select id="linkStatusFilter" class="filter-select">
+                                <option value="all">All statuses</option>
+
+                                <option value="active">Active</option>
+
+                                <option value="inactive">Inactive</option>
+                            </select>
+
+                            <select id="linkSort" class="filter-select">
+                                <option value="recent">Recently created</option>
+
+                                <option value="revenue">Highest revenue</option>
+
+                                <option value="payments">Most payments</option>
+
+                                <option value="amount">Highest amount</option>
+
+                                <option value="name">Name A–Z</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table class="transaction-table" id="paymentLinksTable">
+                            <thead>
+                                <tr>
+                                    <th>Payment link</th>
+
+                                    <th>Amount</th>
+
+                                    <th>Payments</th>
+
+                                    <th>Revenue</th>
+
+                                    <th>Created</th>
+
+                                    <th>Status</th>
+
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="paymentLinksTableBody">
+                                <!-- JS -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="empty-state" id="paymentLinksEmpty" hidden>
+                        <div class="empty-state-icon">⌕</div>
+
+                        <h3>No payment links found</h3>
+
+                        <p>Try changing your search or filters.</p>
+                    </div>
+
+                    <div class="pagination">
+                        <div class="pagination-info" id="linkPaginationInfo">
+                            —
+                        </div>
+
+                        <div
+                            class="pagination-buttons"
+                            id="linkPaginationButtons"
+                        ></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+
+        <script src="js/data.js"></script>
+
+        <script src="js/script.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const data = window.NexaPayData;
+
+                if (!data) return;
+
+                const links = data.paymentLinks;
+
+                /* =========================================
+                   ELEMENTS
+                ========================================= */
+
+                const search = document.querySelector("#linkSearch");
+
+                const statusFilter =
+                    document.querySelector("#linkStatusFilter");
+
+                const sortSelect = document.querySelector("#linkSort");
+
+                const tableBody = document.querySelector(
+                    "#paymentLinksTableBody"
+                );
+
+                const emptyState = document.querySelector("#paymentLinksEmpty");
+
+                const paginationInfo = document.querySelector(
+                    "#linkPaginationInfo"
+                );
+
+                const paginationButtons = document.querySelector(
+                    "#linkPaginationButtons"
+                );
+
+                const totalLinks = document.querySelector("#totalLinks");
+
+                const activeLinks = document.querySelector("#activeLinks");
+
+                const totalPayments =
+                    document.querySelector("#totalLinkPayments");
+
+                const revenue = document.querySelector("#linkRevenue");
+
+                /* =========================================
+                   CONFIG
+                ========================================= */
+
+                const ROWS_PER_PAGE = 15;
+
+                let currentPage = 1;
+
+                let filteredLinks = [...links];
+
+                /* =========================================
+                   FORMAT
+                ========================================= */
+
+                function money(amount, currency = "EUR") {
+                    return new Intl.NumberFormat("fr-FR", {
+                        style: "currency",
+                        currency,
+                        maximumFractionDigits: 2
+                    }).format(amount);
+                }
+
+                function number(value) {
+                    return new Intl.NumberFormat("fr-FR").format(value);
+                }
+
+                function escapeHTML(value) {
+                    return String(value)
+                        .replaceAll("&", "&amp;")
+                        .replaceAll("<", "&lt;")
+                        .replaceAll(">", "&gt;")
+                        .replaceAll('"', "&quot;")
+                        .replaceAll("'", "&#039;");
+                }
+
+                function formatDate(date) {
+                    return new Intl.DateTimeFormat("fr-FR", {
+                        day: "2-digit",
+                        month: "short",
+                        year: "numeric"
+                    }).format(new Date(date));
+                }
+
+                /* =========================================
+                   SUMMARY
+                ========================================= */
+
+                function renderSummary() {
+                    const active = links.filter(link => link.active).length;
+
+                    const payments = links.reduce(
+                        (sum, link) => sum + link.payments,
+                        0
+                    );
+
+                    const totalRevenue = links.reduce(
+                        (sum, link) => sum + link.revenue,
+                        0
+                    );
+
+                    totalLinks.textContent = number(links.length);
+
+                    activeLinks.textContent = number(active);
+
+                    totalPayments.textContent = number(payments);
+
+                    revenue.textContent = money(totalRevenue);
+                }
+
+                /* =========================================
+                   FILTER
+                ========================================= */
+
+                function applyFilters() {
+                    const query = search.value.trim().toLowerCase();
+
+                    const status = statusFilter.value;
+
+                    const sort = sortSelect.value;
+
+                    filteredLinks = links.filter(link => {
+                        const searchable = [
+                            link.id,
+                            link.title,
+                            link.description,
+                            link.code
+                        ]
+                            .join(" ")
+                            .toLowerCase();
+
+                        if (query && !searchable.includes(query)) {
+                            return false;
+                        }
+
+                        if (status === "active" && !link.active) {
+                            return false;
+                        }
+
+                        if (status === "inactive" && link.active) {
+                            return false;
+                        }
+
+                        return true;
+                    });
+
+                    filteredLinks.sort((a, b) => {
+                        if (sort === "revenue") {
+                            return b.revenue - a.revenue;
+                        }
+
+                        if (sort === "payments") {
+                            return b.payments - a.payments;
+                        }
+
+                        if (sort === "amount") {
+                            return b.amount - a.amount;
+                        }
+
+                        if (sort === "name") {
+                            return a.title.localeCompare(b.title);
+                        }
+
+                        return new Date(b.createdAt) - new Date(a.createdAt);
+                    });
+
+                    currentPage = 1;
+
+                    renderTable();
+                }
+
+                /* =========================================
+                   TABLE
+                ========================================= */
+
+                function renderTable() {
+                    const total = filteredLinks.length;
+
+                    const totalPages = Math.ceil(total / ROWS_PER_PAGE);
+
+                    if (currentPage > totalPages && totalPages > 0) {
+                        currentPage = totalPages;
+                    }
+
+                    const start = (currentPage - 1) * ROWS_PER_PAGE;
+
+                    const end = start + ROWS_PER_PAGE;
+
+                    const items = filteredLinks.slice(start, end);
+
+                    tableBody.innerHTML = items
+                        .map(
+                            link => `
+
+                                <tr
+                                    class="
+                                        payment-link-row
+                                    "
+                                    data-id="${escapeHTML(link.id)}"
+                                >
+
+                                    <td>
+
+                                        <div
+                                            class="
+                                                payment-link-cell
+                                            "
+                                        >
+
+                                            <div
+                                                class="
+                                                    payment-link-icon
+                                                "
+                                            >
+                                                ↗
+                                            </div>
+
+
+                                            <div>
+
+                                                <strong>
+                                                    ${escapeHTML(link.title)}
+                                                </strong>
+
+                                                <span>
+                                                    ${escapeHTML(link.code)}
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <strong>
+                                            ${money(link.amount, link.currency)}
+                                        </strong>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        ${number(link.payments)}
+
+                                    </td>
+
+
+                                    <td
+                                        class="amount-cell"
+                                    >
+
+                                        ${money(link.revenue, link.currency)}
+
+                                    </td>
+
+
+                                    <td>
+
+                                        ${formatDate(link.createdAt)}
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span
+                                            class="
+                                                status
+                                                ${
+                                                    link.active
+                                                        ? "status-succeeded"
+                                                        : "status-refunded"
+                                                }
+                                            "
+                                        >
+
+                                            <span
+                                                class="status-dot"
+                                            ></span>
+
+                                            ${
+                                                link.active
+                                                    ? "Active"
+                                                    : "Inactive"
+                                            }
+
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            type="button"
+                                            class="
+                                                table-action
+                                                copy-link-button
+                                            "
+                                            data-code="${escapeHTML(link.code)}"
+                                        >
+                                            Copy
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                            `
+                        )
+                        .join("");
+
+                    if (total === 0) {
+                        emptyState.hidden = false;
+
+                        document.querySelector(
+                            "#paymentLinksTable"
+                        ).style.display = "none";
+                    } else {
+                        emptyState.hidden = true;
+
+                        document.querySelector(
+                            "#paymentLinksTable"
+                        ).style.display = "";
+                    }
+
+                    paginationInfo.textContent =
+                        total === 0
+                            ? "0 payment links"
+                            : `Showing ${start + 1}–${Math.min(
+                                  end,
+                                  total
+                              )} of ${number(total)} payment links`;
+
+                    renderPagination(totalPages);
+
+                    attachActions();
+                }
+
+                /* =========================================
+                   PAGINATION
+                ========================================= */
+
+                function renderPagination(totalPages) {
+                    paginationButtons.innerHTML = "";
+
+                    if (totalPages <= 1) {
+                        return;
+                    }
+
+                    const previous = createButton(
+                        "‹",
+                        currentPage === 1,
+                        () => {
+                            currentPage--;
+
+                            renderTable();
+                        }
+                    );
+
+                    paginationButtons.appendChild(previous);
+
+                    let start = Math.max(1, currentPage - 2);
+
+                    let end = Math.min(totalPages, start + 4);
+
+                    if (end - start < 4) {
+                        start = Math.max(1, end - 4);
+                    }
+
+                    for (let page = start; page <= end; page++) {
+                        const button = createButton(page, false, () => {
+                            currentPage = page;
+
+                            renderTable();
+                        });
+
+                        if (page === currentPage) {
+                            button.classList.add("active");
+                        }
+
+                        paginationButtons.appendChild(button);
+                    }
+
+                    const next = createButton(
+                        "›",
+                        currentPage === totalPages,
+                        () => {
+                            currentPage++;
+
+                            renderTable();
+                        }
+                    );
+
+                    paginationButtons.appendChild(next);
+                }
+
+                function createButton(text, disabled, callback) {
+                    const button = document.createElement("button");
+
+                    button.type = "button";
+
+                    button.className = "pagination-button";
+
+                    button.textContent = text;
+
+                    button.disabled = disabled;
+
+                    button.addEventListener("click", callback);
+
+                    return button;
+                }
+
+                /* =========================================
+                   COPY LINK
+                ========================================= */
+
+                function attachActions() {
+                    document
+                        .querySelectorAll(".copy-link-button")
+                        .forEach(button => {
+                            button.addEventListener("click", event => {
+                                event.stopPropagation();
+
+                                const code = button.dataset.code;
+
+                                /*
+                                 * Fictional public
+                                 * payment URL.
+                                 */
+
+                                const url = `https://pay.nexapay.test/${code}`;
+
+                                if (navigator.clipboard) {
+                                    navigator.clipboard
+                                        .writeText(url)
+                                        .then(() => {
+                                            showCopied(button);
+                                        })
+                                        .catch(() => {
+                                            showCopied(button);
+                                        });
+                                } else {
+                                    showCopied(button);
+                                }
+                            });
+                        });
+
+                    document
+                        .querySelectorAll(".payment-link-row")
+                        .forEach(row => {
+                            row.addEventListener("click", event => {
+                                if (event.target.closest(".copy-link-button")) {
+                                    return;
+                                }
+
+                                const id = row.dataset.id;
+
+                                const link = links.find(item => item.id === id);
+
+                                if (link) {
+                                    openLinkDetail(link);
+                                }
+                            });
+                        });
+                }
+
+                function showCopied(button) {
+                    const original = button.textContent;
+
+                    button.textContent = "Copied ✓";
+
+                    button.classList.add("copied");
+
+                    setTimeout(() => {
+                        button.textContent = original;
+
+                        button.classList.remove("copied");
+                    }, 1600);
+                }
+
+                /* =========================================
+                   DETAIL MODAL
+                ========================================= */
+
+                function openLinkDetail(link) {
+                    let modal = document.querySelector("#paymentLinkModal");
+
+                    if (!modal) {
+                        modal = document.createElement("div");
+
+                        modal.id = "paymentLinkModal";
+
+                        modal.className = "transaction-modal";
+
+                        modal.innerHTML = `
+
+                            <div
+                                class="modal-overlay"
+                            ></div>
+
+
+                            <div
+                                class="
+                                    transaction-modal-panel
+                                "
+                            >
+
+                                <div
+                                    class="modal-header"
+                                >
+
+                                    <div>
+
+                                        <span
+                                            class="
+                                                modal-eyebrow
+                                            "
+                                        >
+                                            Payment link
+                                        </span>
+
+                                        <h2
+                                            id="
+                                                paymentLinkModalTitle
+                                            "
+                                        ></h2>
+
+                                    </div>
+
+
+                                    <button
+                                        type="button"
+                                        class="modal-close"
+                                        id="
+                                            closePaymentLinkModal
+                                        "
+                                    >
+                                        ×
+                                    </button>
+
+                                </div>
+
+
+                                <div
+                                    id="
+                                        paymentLinkModalContent
+                                    "
+                                    class="modal-content"
+                                ></div>
+
+                            </div>
+
+                        `;
+
+                        document.body.appendChild(modal);
+
+                        modal
+                            .querySelector(".modal-overlay")
+                            .addEventListener("click", closeModal);
+
+                        modal
+                            .querySelector("#closePaymentLinkModal")
+                            .addEventListener("click", closeModal);
+                    }
+
+                    document.querySelector(
+                        "#paymentLinkModalTitle"
+                    ).textContent = link.title;
+
+                    const publicURL = `https://pay.nexapay.test/${link.code}`;
+
+                    document.querySelector(
+                        "#paymentLinkModalContent"
+                    ).innerHTML = `
+
+                            <div
+                                class="
+                                    transaction-detail-amount
+                                "
+                            >
+                                ${money(link.amount, link.currency)}
+                            </div>
+
+
+                            <span
+                                class="
+                                    status
+                                    ${
+                                        link.active
+                                            ? "status-succeeded"
+                                            : "status-refunded"
+                                    }
+                                "
+                            >
+
+                                <span
+                                    class="status-dot"
+                                ></span>
+
+                                ${link.active ? "Active" : "Inactive"}
+
+                            </span>
+
+
+                            <p
+                                class="
+                                    modal-description
+                                "
+                            >
+                                ${escapeHTML(link.description)}
+                            </p>
+
+
+                            <div
+                                class="detail-grid"
+                            >
+
+                                <div
+                                    class="detail-item"
+                                >
+
+                                    <span>
+                                        Link ID
+                                    </span>
+
+                                    <strong>
+                                        ${escapeHTML(link.id)}
+                                    </strong>
+
+                                </div>
+
+
+                                <div
+                                    class="detail-item"
+                                >
+
+                                    <span>
+                                        Payments
+                                    </span>
+
+                                    <strong>
+                                        ${number(link.payments)}
+                                    </strong>
+
+                                </div>
+
+
+                                <div
+                                    class="detail-item"
+                                >
+
+                                    <span>
+                                        Revenue
+                                    </span>
+
+                                    <strong>
+                                        ${money(link.revenue, link.currency)}
+                                    </strong>
+
+                                </div>
+
+
+                                <div
+                                    class="detail-item"
+                                >
+
+                                    <span>
+                                        Created
+                                    </span>
+
+                                    <strong>
+                                        ${formatDate(link.createdAt)}
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                class="
+                                    payment-link-preview
+                                "
+                            >
+
+                                <span>
+                                    Public URL
+                                </span>
+
+                                <div>
+
+                                    <code>
+                                        ${publicURL}
+                                    </code>
+
+                                    <button
+                                        type="button"
+                                        id="
+                                            modalCopyLink
+                                        "
+                                        class="
+                                            table-action
+                                        "
+                                    >
+                                        Copy
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    document
+                        .querySelector("#modalCopyLink")
+                        .addEventListener("click", () => {
+                            if (navigator.clipboard) {
+                                navigator.clipboard
+                                    .writeText(publicURL)
+                                    .then(() => {
+                                        document.querySelector(
+                                            "#modalCopyLink"
+                                        ).textContent = "Copied ✓";
+                                    });
+                            }
+                        });
+
+                    requestAnimationFrame(() => {
+                        modal.classList.add("visible");
+
+                        document.body.classList.add("modal-open");
+                    });
+                }
+
+                function closeModal() {
+                    const modal = document.querySelector("#paymentLinkModal");
+
+                    if (!modal) return;
+
+                    modal.classList.remove("visible");
+
+                    document.body.classList.remove("modal-open");
+                }
+
+                /* =========================================
+                   CREATE LINK
+                ========================================= */
+
+                document
+                    .querySelector("#createPaymentLink")
+                    .addEventListener("click", () => {
+                        alert(
+                            "Payment link creation flow — bientôt disponible."
+                        );
+                    });
+
+                /* =========================================
+                   EXPORT
+                ========================================= */
+
+                document
+                    .querySelector("#exportPaymentLinks")
+                    .addEventListener("click", () => {
+                        const headers = [
+                            "ID",
+                            "Title",
+                            "Code",
+                            "Amount",
+                            "Currency",
+                            "Payments",
+                            "Revenue",
+                            "Active",
+                            "Created"
+                        ];
+
+                        const rows = links.map(link => [
+                            link.id,
+
+                            link.title,
+
+                            link.code,
+
+                            link.amount,
+
+                            link.currency,
+
+                            link.payments,
+
+                            link.revenue,
+
+                            link.active,
+
+                            link.createdAt
+                        ]);
+
+                        const csv = [
+                            headers.join(","),
+
+                            ...rows.map(row =>
+                                row
+                                    .map(
+                                        value =>
+                                            `"${String(value).replaceAll(
+                                                '"',
+                                                '""'
+                                            )}"`
+                                    )
+                                    .join(",")
+                            )
+                        ].join("\n");
+
+                        const blob = new Blob([csv], {
+                            type: "text/csv;charset=utf-8;"
+                        });
+
+                        const url = URL.createObjectURL(blob);
+
+                        const link = document.createElement("a");
+
+                        link.href = url;
+
+                        link.download = "nexapay-payment-links.csv";
+
+                        document.body.appendChild(link);
+
+                        link.click();
+
+                        link.remove();
+
+                        URL.revokeObjectURL(url);
+                    });
+
+                /* =========================================
+                   EVENTS
+                ========================================= */
+
+                search.addEventListener("input", applyFilters);
+
+                statusFilter.addEventListener("change", applyFilters);
+
+                sortSelect.addEventListener("change", applyFilters);
+
+                document.addEventListener("keydown", event => {
+                    if (event.key === "Escape") {
+                        closeModal();
+                    }
+                });
+
+                /* =========================================
+                   INIT
+                ========================================= */
+
+                renderSummary();
+
+                renderTable();
+            });
+        </script>
+    </body>
+</html>

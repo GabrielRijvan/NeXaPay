@@ -1,0 +1,930 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>NexaPay — Settings</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <div class="app">
+            <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-logo">
+                    <div class="logo-mark">N</div>
+                    <span>NexaPay</span>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <div class="nav-section">
+                        <div class="nav-label">Workspace</div>
+
+                        <a href="index.html" class="nav-item">
+                            <span class="nav-icon">⌂</span>
+                            <span>Overview</span>
+                        </a>
+
+                        <a href="transactions.html" class="nav-item">
+                            <span class="nav-icon">↔</span>
+                            <span>Transactions</span>
+                        </a>
+
+                        <a href="customers.html" class="nav-item">
+                            <span class="nav-icon">◉</span>
+                            <span>Customers</span>
+                        </a>
+
+                        <a href="payment-links.html" class="nav-item">
+                            <span class="nav-icon">⌁</span>
+                            <span>Payment Links</span>
+                        </a>
+
+                        <a href="invoices.html" class="nav-item">
+                            <span class="nav-icon">▤</span>
+                            <span>Invoices</span>
+                        </a>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="nav-label">Finance</div>
+
+                        <a href="#" class="nav-item">
+                            <span class="nav-icon">€</span>
+                            <span>Balance</span>
+                        </a>
+
+                        <a href="#" class="nav-item">
+                            <span class="nav-icon">↑</span>
+                            <span>Payouts</span>
+                        </a>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="nav-label">Manage</div>
+
+                        <a href="settings.html" class="nav-item active">
+                            <span class="nav-icon">⚙</span>
+                            <span>Settings</span>
+                        </a>
+
+                        <a href="#" class="nav-item">
+                            <span class="nav-icon">?</span>
+                            <span>Help center</span>
+                        </a>
+                    </div>
+                </nav>
+
+                <div class="sidebar-bottom">
+                    <div class="workspace-user">
+                        <div class="user-avatar">G</div>
+
+                        <div class="user-info">
+                            <strong>Gabhy</strong>
+                            <span>Ga.B Agency</span>
+                        </div>
+
+                        <span class="user-more"> ••• </span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- =========================
+         MAIN
+    ========================== -->
+
+            <main class="main">
+                <!-- TOPBAR -->
+
+                <header class="topbar">
+                    <div class="topbar-left">
+                        <button class="mobile-menu" id="menuToggle">☰</button>
+
+                        <div class="breadcrumb">
+                            <span>Workspace</span>
+
+                            <span>/</span>
+
+                            <strong>Settings</strong>
+                        </div>
+                    </div>
+
+                    <div class="topbar-actions">
+                        <button
+                            class="icon-button"
+                            id="themeToggle"
+                            title="Changer le thème"
+                        >
+                            ◐
+                        </button>
+
+                        <button class="icon-button" title="Notifications">
+                            ♢
+                        </button>
+
+                        <div class="topbar-avatar">G</div>
+                    </div>
+                </header>
+
+                <!-- =========================
+             CONTENT
+        ========================== -->
+
+                <section class="content">
+                    <div class="page-header">
+                        <div>
+                            <div class="page-eyebrow">Workspace</div>
+
+                            <h1>Settings</h1>
+
+                            <p>
+                                Manage your workspace, account and payment
+                                configuration.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- SETTINGS LAYOUT -->
+
+                    <div class="settings-layout">
+                        <!-- SETTINGS NAV -->
+
+                        <aside class="settings-nav">
+                            <button
+                                class="settings-nav-item active"
+                                data-section="profile"
+                            >
+                                <span>◉</span>
+                                Profile
+                            </button>
+
+                            <button
+                                class="settings-nav-item"
+                                data-section="business"
+                            >
+                                <span>▣</span>
+                                Business
+                            </button>
+
+                            <button
+                                class="settings-nav-item"
+                                data-section="payments"
+                            >
+                                <span>€</span>
+                                Payments
+                            </button>
+
+                            <button
+                                class="settings-nav-item"
+                                data-section="notifications"
+                            >
+                                <span>♢</span>
+                                Notifications
+                            </button>
+
+                            <button
+                                class="settings-nav-item"
+                                data-section="security"
+                            >
+                                <span>⌑</span>
+                                Security
+                            </button>
+
+                            <button
+                                class="settings-nav-item"
+                                data-section="developers"
+                            >
+                                <span>&lt;/&gt;</span>
+                                Developers
+                            </button>
+                        </aside>
+
+                        <!-- SETTINGS CONTENT -->
+
+                        <div class="settings-content">
+                            <!-- =========================
+                         PROFILE
+                    ========================== -->
+
+                            <section
+                                class="settings-section active"
+                                id="section-profile"
+                            >
+                                <div class="settings-section-header">
+                                    <div>
+                                        <h2>Profile</h2>
+
+                                        <p>
+                                            Your personal account information.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="settings-card">
+                                    <div class="profile-settings-header">
+                                        <div class="large-user-avatar">G</div>
+
+                                        <div>
+                                            <strong> Gabhy </strong>
+
+                                            <span> Account owner </span>
+
+                                            <button
+                                                class="secondary-button small"
+                                            >
+                                                Change avatar
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-grid">
+                                        <div class="form-field">
+                                            <label> First name </label>
+
+                                            <input type="text" value="Gabhy" />
+                                        </div>
+
+                                        <div class="form-field">
+                                            <label> Last name </label>
+
+                                            <input
+                                                type="text"
+                                                value="Gabriel"
+                                            />
+                                        </div>
+
+                                        <div class="form-field full">
+                                            <label> Email address </label>
+
+                                            <input
+                                                type="email"
+                                                value="gabhy@example.com"
+                                            />
+                                        </div>
+
+                                        <div class="form-field full">
+                                            <label> Phone number </label>
+
+                                            <input
+                                                type="tel"
+                                                value="+261 34 00 000 00"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div class="settings-card-footer">
+                                        <button
+                                            class="primary-button"
+                                            data-save
+                                        >
+                                            Save changes
+                                        </button>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- =========================
+                         BUSINESS
+                    ========================== -->
+
+                            <section
+                                class="settings-section"
+                                id="section-business"
+                            >
+                                <div class="settings-section-header">
+                                    <div>
+                                        <h2>Business information</h2>
+
+                                        <p>
+                                            Information displayed on invoices
+                                            and payment pages.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="settings-card">
+                                    <div class="form-grid">
+                                        <div class="form-field full">
+                                            <label> Business name </label>
+
+                                            <input
+                                                type="text"
+                                                value="Ga.B Agency"
+                                            />
+                                        </div>
+
+                                        <div class="form-field">
+                                            <label> Country </label>
+
+                                            <select>
+                                                <option selected>
+                                                    Madagascar
+                                                </option>
+
+                                                <option>France</option>
+
+                                                <option>Belgium</option>
+
+                                                <option>Switzerland</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-field">
+                                            <label> Default currency </label>
+
+                                            <select>
+                                                <option selected>
+                                                    EUR — Euro
+                                                </option>
+
+                                                <option>USD — US Dollar</option>
+
+                                                <option>
+                                                    GBP — British Pound
+                                                </option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-field full">
+                                            <label> Business address </label>
+
+                                            <input
+                                                type="text"
+                                                value="Antananarivo, Madagascar"
+                                            />
+                                        </div>
+
+                                        <div class="form-field">
+                                            <label> Tax ID </label>
+
+                                            <input
+                                                type="text"
+                                                placeholder="Optional"
+                                            />
+                                        </div>
+
+                                        <div class="form-field">
+                                            <label> Website </label>
+
+                                            <input
+                                                type="url"
+                                                value="https://gab-agency.example"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div class="settings-card-footer">
+                                        <button
+                                            class="primary-button"
+                                            data-save
+                                        >
+                                            Save changes
+                                        </button>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- =========================
+                         PAYMENTS
+                    ========================== -->
+
+                            <section
+                                class="settings-section"
+                                id="section-payments"
+                            >
+                                <div class="settings-section-header">
+                                    <div>
+                                        <h2>Payment settings</h2>
+
+                                        <p>
+                                            Configure how your customers can
+                                            pay.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="settings-card">
+                                    <div class="settings-card-title">
+                                        Payment methods
+                                    </div>
+
+                                    <div class="setting-row">
+                                        <div class="setting-row-info">
+                                            <strong> Visa & Mastercard </strong>
+
+                                            <span>
+                                                Accept major debit and credit
+                                                cards.
+                                            </span>
+                                        </div>
+
+                                        <label class="toggle">
+                                            <input type="checkbox" checked />
+
+                                            <span></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="setting-row">
+                                        <div class="setting-row-info">
+                                            <strong> American Express </strong>
+
+                                            <span>
+                                                Allow Amex card payments.
+                                            </span>
+                                        </div>
+
+                                        <label class="toggle">
+                                            <input type="checkbox" checked />
+
+                                            <span></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="setting-row">
+                                        <div class="setting-row-info">
+                                            <strong> Bank transfers </strong>
+
+                                            <span>
+                                                Allow customers to pay by bank
+                                                transfer.
+                                            </span>
+                                        </div>
+
+                                        <label class="toggle">
+                                            <input type="checkbox" checked />
+
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="settings-card">
+                                    <div class="settings-card-title">
+                                        Payment behavior
+                                    </div>
+
+                                    <div class="form-field">
+                                        <label>
+                                            Default payment description
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            value="Payment to Ga.B Agency"
+                                        />
+                                    </div>
+
+                                    <div class="form-field">
+                                        <label> Receipt email </label>
+
+                                        <select>
+                                            <option selected>
+                                                Automatically send receipts
+                                            </option>
+
+                                            <option>Only send manually</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="settings-card-footer">
+                                        <button
+                                            class="primary-button"
+                                            data-save
+                                        >
+                                            Save changes
+                                        </button>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- =========================
+                         NOTIFICATIONS
+                    ========================== -->
+
+                            <section
+                                class="settings-section"
+                                id="section-notifications"
+                            >
+                                <div class="settings-section-header">
+                                    <div>
+                                        <h2>Notifications</h2>
+
+                                        <p>
+                                            Choose which events should trigger
+                                            notifications.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="settings-card">
+                                    <div class="setting-row">
+                                        <div class="setting-row-info">
+                                            <strong>
+                                                Successful payments
+                                            </strong>
+
+                                            <span>
+                                                Notify me when a payment
+                                                succeeds.
+                                            </span>
+                                        </div>
+
+                                        <label class="toggle">
+                                            <input type="checkbox" checked />
+
+                                            <span></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="setting-row">
+                                        <div class="setting-row-info">
+                                            <strong> Failed payments </strong>
+
+                                            <span>
+                                                Notify me when a payment fails.
+                                            </span>
+                                        </div>
+
+                                        <label class="toggle">
+                                            <input type="checkbox" checked />
+
+                                            <span></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="setting-row">
+                                        <div class="setting-row-info">
+                                            <strong> Invoice overdue </strong>
+
+                                            <span>
+                                                Notify me when an invoice
+                                                becomes overdue.
+                                            </span>
+                                        </div>
+
+                                        <label class="toggle">
+                                            <input type="checkbox" checked />
+
+                                            <span></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="setting-row">
+                                        <div class="setting-row-info">
+                                            <strong> Weekly summary </strong>
+
+                                            <span>
+                                                Receive a weekly overview of
+                                                your account.
+                                            </span>
+                                        </div>
+
+                                        <label class="toggle">
+                                            <input type="checkbox" checked />
+
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- =========================
+                         SECURITY
+                    ========================== -->
+
+                            <section
+                                class="settings-section"
+                                id="section-security"
+                            >
+                                <div class="settings-section-header">
+                                    <div>
+                                        <h2>Security</h2>
+
+                                        <p>Protect your NexaPay account.</p>
+                                    </div>
+                                </div>
+
+                                <div class="settings-card">
+                                    <div class="setting-row">
+                                        <div class="setting-row-info">
+                                            <strong>
+                                                Two-factor authentication
+                                            </strong>
+
+                                            <span>
+                                                Add an additional layer of
+                                                security.
+                                            </span>
+                                        </div>
+
+                                        <label class="toggle">
+                                            <input type="checkbox" />
+
+                                            <span></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="setting-row">
+                                        <div class="setting-row-info">
+                                            <strong>
+                                                Login notifications
+                                            </strong>
+
+                                            <span>
+                                                Get notified when a new device
+                                                signs in.
+                                            </span>
+                                        </div>
+
+                                        <label class="toggle">
+                                            <input type="checkbox" checked />
+
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="settings-card">
+                                    <div class="settings-card-title">
+                                        Change password
+                                    </div>
+
+                                    <div class="form-grid">
+                                        <div class="form-field full">
+                                            <label> Current password </label>
+
+                                            <input type="password" />
+                                        </div>
+
+                                        <div class="form-field">
+                                            <label> New password </label>
+
+                                            <input type="password" />
+                                        </div>
+
+                                        <div class="form-field">
+                                            <label> Confirm password </label>
+
+                                            <input type="password" />
+                                        </div>
+                                    </div>
+
+                                    <div class="settings-card-footer">
+                                        <button
+                                            class="primary-button"
+                                            data-save
+                                        >
+                                            Update password
+                                        </button>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- =========================
+                         DEVELOPERS
+                    ========================== -->
+
+                            <section
+                                class="settings-section"
+                                id="section-developers"
+                            >
+                                <div class="settings-section-header">
+                                    <div>
+                                        <h2>Developers</h2>
+
+                                        <p>
+                                            Manage API access and integrations.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="settings-card">
+                                    <div class="settings-card-title">
+                                        API keys
+                                    </div>
+
+                                    <div class="api-key-row">
+                                        <div>
+                                            <strong> Publishable key </strong>
+
+                                            <code>
+                                                pk_live_51Nexa••••••••••••••
+                                            </code>
+                                        </div>
+
+                                        <button class="secondary-button small">
+                                            Reveal
+                                        </button>
+                                    </div>
+
+                                    <div class="api-key-row">
+                                        <div>
+                                            <strong> Secret key </strong>
+
+                                            <code>
+                                                sk_live_51Nexa••••••••••••••
+                                            </code>
+                                        </div>
+
+                                        <button class="secondary-button small">
+                                            Reveal
+                                        </button>
+                                    </div>
+
+                                    <div class="settings-card-footer">
+                                        <button
+                                            class="secondary-button"
+                                            id="createApiKey"
+                                        >
+                                            + Create new key
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="settings-card">
+                                    <div class="settings-card-title">
+                                        Webhooks
+                                    </div>
+
+                                    <p class="settings-description">
+                                        Send payment events to your application
+                                        in real time.
+                                    </p>
+
+                                    <div class="webhook-placeholder">
+                                        <div class="webhook-icon">↗</div>
+
+                                        <div>
+                                            <strong>
+                                                No webhook endpoints
+                                            </strong>
+
+                                            <span>
+                                                Connect an endpoint to start
+                                                receiving events.
+                                            </span>
+                                        </div>
+
+                                        <button
+                                            class="primary-button"
+                                            id="addWebhook"
+                                        >
+                                            Add endpoint
+                                        </button>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- DANGER ZONE -->
+
+                            <section class="settings-card danger-zone">
+                                <div>
+                                    <div class="settings-card-title">
+                                        Danger zone
+                                    </div>
+
+                                    <p>
+                                        Permanently close this workspace and
+                                        delete its data.
+                                    </p>
+                                </div>
+
+                                <button
+                                    class="danger-button"
+                                    id="deleteWorkspace"
+                                >
+                                    Delete workspace
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- =========================
+     SCRIPT
+========================== -->
+
+        <script src="js/data.js"></script>
+        <script src="js/script.js"></script>
+
+        <script>
+            "use strict";
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const navItems =
+                    document.querySelectorAll(".settings-nav-item");
+
+                const sections = document.querySelectorAll(".settings-section");
+
+                /* =========================
+       SETTINGS NAVIGATION
+    ========================== */
+
+                navItems.forEach(item => {
+                    item.addEventListener("click", () => {
+                        const target = item.dataset.section;
+
+                        navItems.forEach(nav => {
+                            nav.classList.remove("active");
+                        });
+
+                        item.classList.add("active");
+
+                        sections.forEach(section => {
+                            section.classList.remove("active");
+                        });
+
+                        const targetSection = document.getElementById(
+                            `section-${target}`
+                        );
+
+                        if (targetSection) {
+                            targetSection.classList.add("active");
+                        }
+                    });
+                });
+
+                /* =========================
+       SAVE BUTTONS
+    ========================== */
+
+                document.querySelectorAll("[data-save]").forEach(button => {
+                    button.addEventListener("click", () => {
+                        const originalText = button.textContent;
+
+                        button.textContent = "Saved ✓";
+
+                        button.disabled = true;
+
+                        setTimeout(() => {
+                            button.textContent = originalText;
+
+                            button.disabled = false;
+                        }, 1500);
+                    });
+                });
+
+                /* =========================
+       API KEY
+    ========================== */
+
+                const createApiKey = document.getElementById("createApiKey");
+
+                if (createApiKey) {
+                    createApiKey.addEventListener("click", () => {
+                        alert("New API key generation — bientôt disponible.");
+                    });
+                }
+
+                /* =========================
+       WEBHOOK
+    ========================== */
+
+                const addWebhook = document.getElementById("addWebhook");
+
+                if (addWebhook) {
+                    addWebhook.addEventListener("click", () => {
+                        alert("Webhook configuration — bientôt disponible.");
+                    });
+                }
+
+                /* =========================
+       DELETE WORKSPACE
+    ========================== */
+
+                const deleteWorkspace =
+                    document.getElementById("deleteWorkspace");
+
+                if (deleteWorkspace) {
+                    deleteWorkspace.addEventListener("click", () => {
+                        const confirmation = confirm(
+                            "Are you sure you want to delete this workspace?"
+                        );
+
+                        if (confirmation) {
+                            alert(
+                                "Workspace deletion is disabled in this demo."
+                            );
+                        }
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>
